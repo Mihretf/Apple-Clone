@@ -48,8 +48,7 @@ class Youtube extends Component {
                       </div>
                       <div className="videoInfoWrapper">
                         <div className="videoTitle">
-                          <a href={vidLink} target="_blank">
-                            {singleVideo.snippet.title}
+<a href="your-link" target="_blank" rel="noreferrer">Open YouTube Video</a>                            {singleVideo.snippet.title}
                           </a>
                         </div>
                         <div className="videoDesc">
