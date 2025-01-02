@@ -10,7 +10,7 @@ class Youtube extends Component {
 
   componentDidMount() {
     fetch(
-      "https://www.googleapis.com/youtube/v3/search?key={API here}&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9"
+      `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_YOUTUBE_API_KEY}&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -48,7 +48,8 @@ class Youtube extends Component {
                       </div>
                       <div className="videoInfoWrapper">
                         <div className="videoTitle">
-<a href="your-link" target="_blank" rel="noreferrer">Open YouTube Video</a>                            {singleVideo.snippet.title}
+                          <a href={vidLink} target="_blank" rel="noreferrer">
+                            {singleVideo.snippet.title}
                           </a>
                         </div>
                         <div className="videoDesc">
